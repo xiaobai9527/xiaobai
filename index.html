@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+
+<body>
+    <script>
+        var arr = [
+            { name: '张三1' },
+            { name: '张三2' },
+            { name: '张三3' },
+            { name: '张三4' }
+        ];
+        // 利用循环, 给他添加方法
+        for (var i = 0; i < arr.length; i++) {
+            arr[i].i = i+1;
+            arr[i].sayHello = function () {
+                console.log(this.i);
+            };
+
+        }
+        for(var j = 0; j < arr.length; j++){
+            arr[j].sayHello();
+        }
+    </script>
+</body>
+
+</html>
